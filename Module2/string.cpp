@@ -22,7 +22,7 @@ int main()
     s.erase(s.begin());
     //s.erase(s.begin() + s.size()-1);
     s.pop_back();
-    cout<<s<<"\n";
+    cout<<s<<endl;
 
     return 0;
 }
