@@ -36,6 +36,8 @@ public:
         cout<<name<<" "<<std_id<<" "<<age<<" "<<fathers_name<<" "<<mothers_name<<endl;
     }
 
+
+    //Destructor Called Automatically if there is no 'new' keyword and for Student class Destructor is optional
     ~Student()
     {
         //cout<<"Called";

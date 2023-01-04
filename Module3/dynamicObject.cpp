@@ -27,6 +27,6 @@ int main()
 {
     Student *s = new Student("A", 10, 20);
     s->print_information();
-    (*s).print_information();
+    //(*s).print_information();
     return 0;
 }

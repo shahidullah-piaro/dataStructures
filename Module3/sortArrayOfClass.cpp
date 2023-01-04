@@ -26,13 +26,13 @@ public:
     {
         cout<<name<<" "<<std_id<<" "<<age<<" "<<fathers_name<<" "<<mothers_name<<endl;
     }
-
+    //for sorting option 2 :
     bool operator < (Student s)
     {
         return std_id < s.std_id;
     }
 };
-
+//for sorting option 1 :
 bool comp(Student a, Student b)
 {
     //when a is less than b
@@ -51,7 +51,7 @@ int main()
         a[i].print_information();
     }
     cout<<"After sorting"<<endl;
-    sort(a.begin(),a.end());
+    sort(a.begin(),a.end());//,comp -> Option 1 function
     for(int i=0;i<10;i++)
     {
         a[i].print_information();
