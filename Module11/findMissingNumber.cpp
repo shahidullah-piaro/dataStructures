@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-//Time Complexity
-//O(nLogn)
+
 vector<int> merge_sort(vector<int>&a)
 {
     //base case
@@ -16,7 +15,7 @@ vector<int> merge_sort(vector<int>&a)
     vector<int>c;
     for(int i=0; i<mid; i++)
         b.push_back(a[i]);
-    for(int i=mid; i<a.size();i++)
+    for(int i=mid; i<a.size(); i++)
         c.push_back(a[i]);
 
     vector<int>sorted_b = merge_sort(b);
@@ -26,7 +25,7 @@ vector<int> merge_sort(vector<int>&a)
     int idx1 = 0;
     int idx2 = 0;
 
-    for(int i=0;i<a.size();i++)
+    for(int i=0; i<a.size(); i++)
     {
         if(idx1 == sorted_b.size())
         {
@@ -52,12 +51,29 @@ vector<int> merge_sort(vector<int>&a)
     return sorted_a;
 }
 
+int findMissingNo (vector<int>&a, int len)
+{
+    int temp;
+    temp  = ((len+1)*(len+2))/2;
+    for (int i = 0; i<len; i++)
+        temp -= a[i];
+    return temp;
+}
+
 int main()
 {
-    vector<int>a = {9,8,7,6,5,4,3,2,1};
+    int n;
+    cin>>n;
+    int inttt;
+    vector<int>a;
+    for(int i=0 ; i<n-1; i++)
+    {
+        cin>>inttt;
+        a.push_back(inttt);
+    };
     vector<int>ans = merge_sort(a);
-    for(int i=0;i<ans.size();i++)
-        cout<<ans[i]<<" ";
+    int missingNo = findMissingNo(ans,n-1);
+    cout<<missingNo;
     return 0;
 }
 

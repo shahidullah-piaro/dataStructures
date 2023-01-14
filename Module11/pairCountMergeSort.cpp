@@ -1,10 +1,11 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-//Time Complexity
-//O(nLogn)
+int n,k;
+int pairCount;
 vector<int> merge_sort(vector<int>&a)
 {
+    //int countt;
     //base case
     if(a.size()<=1)
     {
@@ -16,7 +17,7 @@ vector<int> merge_sort(vector<int>&a)
     vector<int>c;
     for(int i=0; i<mid; i++)
         b.push_back(a[i]);
-    for(int i=mid; i<a.size();i++)
+    for(int i=mid; i<a.size(); i++)
         c.push_back(a[i]);
 
     vector<int>sorted_b = merge_sort(b);
@@ -26,7 +27,7 @@ vector<int> merge_sort(vector<int>&a)
     int idx1 = 0;
     int idx2 = 0;
 
-    for(int i=0;i<a.size();i++)
+    for(int i=0; i<a.size(); i++)
     {
         if(idx1 == sorted_b.size())
         {
@@ -49,15 +50,54 @@ vector<int> merge_sort(vector<int>&a)
             idx2++;
         }
     }
+
+
+
     return sorted_a;
 }
 
+void pairSum(vector<int>&input, int size, int x)
+{
+    int i = 0, j = size - 1, min = 0, max = 0, counter = 0;
+    while (i < j)
+    {
+        if ((input[i] + input[j]) > x)
+        {
+            j--;
+        }
+        else if ((input[i] + input[j]) < x)
+        {
+            i++;
+        }
+        else
+        {
+            if (input[i] > input[j])
+            {
+                i++, j--;
+                counter++;
+            }
+            else
+            {
+                i++, j--;
+                counter++;
+            }
+        }
+    }
+    cout << counter;
+}
 int main()
 {
-    vector<int>a = {9,8,7,6,5,4,3,2,1};
-    vector<int>ans = merge_sort(a);
-    for(int i=0;i<ans.size();i++)
-        cout<<ans[i]<<" ";
+    cin>>n;
+    int inttt;
+    vector<int>a;
+    for(int i=0 ; i<n; i++)
+    {
+        cin>>inttt;
+        a.push_back(inttt);
+    };
+    cin>>k;
+    vector<int>sorted_a = merge_sort(a);
+
+    pairSum(sorted_a,n,k);
     return 0;
 }
-
