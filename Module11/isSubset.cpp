@@ -2,9 +2,9 @@
 
 using namespace std;
 
-int binarySearch(int arr[], int low, int high, int x);
+int binarySearch(vector<int>&arr, int low, int high, int x);
 
-bool isSubset(int arr1[], vector<int>&a, int m, int n)
+bool isSubset(vector<int>&arr1, vector<int>&a, int m, int n)
 {
     int i = 0;
 
@@ -18,7 +18,7 @@ bool isSubset(int arr1[], vector<int>&a, int m, int n)
 
 }
 
-int binarySearch(int arr[], int low,int high, int x)
+int binarySearch(vector<int>&arr, int low,int high, int x)
 {
     if (high >= low)
     {
@@ -46,20 +46,14 @@ int main()
         a.push_back(inttt);
     };
 
-    int m;
-    cin>>m;
-    int arr1[m-1];
-    for(int i=0;i<m;i++)
-    {
-        cin>>arr1[i];
-    }
-    //int arr1[] = { 7, 6, 3, 2, 1 };
+
+    vector<int>arr1 = { 1,2,3,4,5,6 };
     //int arr2[] = { 7, 2, 3 };
 
-    //int m = sizeof(arr1) / sizeof(arr1[0]);
+    int m = arr1.size();
     //int n = sizeof(arr2) / sizeof(arr2[0]);
 
-    sort(arr1, arr1+m);
+    //sort(arr1, arr1+m);
     if (isSubset(arr1, a, m, n))
         cout<<"Yes";
     else
