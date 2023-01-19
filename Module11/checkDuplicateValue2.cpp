@@ -24,10 +24,6 @@ int binarySearch(vector<int>&arr, int x, int low, int high)
         {
             high = mid - 1;
         }
-        else
-        {
-            return x;
-        }
     }
 }
 

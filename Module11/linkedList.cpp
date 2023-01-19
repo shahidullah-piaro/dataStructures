@@ -53,6 +53,7 @@ public:
         }
         cout<<"\n";
     }
+    //Reverse linked list
     node* reverse(node* head)
     {
         if (head == NULL || head->nxt == NULL)
@@ -124,24 +125,6 @@ public:
 
 int main()
 {
-    /*
-        LinkedList l;
-        cout<<l.getSize()<<"\n";
-        l.InsertAtHead(5);
-        cout<<l.getSize()<<"\n";
-        l.InsertAtHead(6);
-        l.InsertAtHead(30);
-        cout<<l.getSize()<<"\n";
-        l.InsertAtHead(20);
-        l.InsertAtHead(30);
-
-        cout<<l.getValue(2)<<"\n";
-
-        cout<<l.getValue(6)<<"\n";
-    */
-
-
-
     LinkedList l;
     l.getSize();
     l.InsertAtHead(5);
@@ -153,13 +136,8 @@ int main()
     l.InsertAtHead(30);
     cout<<l.getValue(2)<<endl;
     cout<<l.getValue(6)<<endl;
-/*
-    l.printReverse();
-    l.Traverse();
-    l.swapFirst();
-    l.Traverse();
-    l.printReverse();
-*/
+
+
     l.head = l.reverse(l.head);
     l.Traverse();
     l.head = l.reverse(l.head);

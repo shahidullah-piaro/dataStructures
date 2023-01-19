@@ -9,8 +9,8 @@ int main()
     int intttt;
     vector<int>a2;
     for(int i=0 ; i<m; i++)
-    {
         cin>>intttt;
+    {
         a2.push_back(intttt);
     };
     int n,b;
