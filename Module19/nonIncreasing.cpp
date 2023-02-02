@@ -1,9 +1,6 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-//Time Complexity
-//O(n^2) -> Worst Case
-//O(nlogn) -> On Avg
 
 vector<int> quick_sort(vector<int>&a)
 {

@@ -44,17 +44,6 @@ public:
         a->nxt = head;
         head = a;
     }
-    //Prints the linked list
-    void Traverse()
-    {
-        node* a = head;
-        while(a!=NULL)
-        {
-            cout<<a->data<<" ";
-            a = a->nxt;
-        }
-        cout<<"\n";
-    }
     //Search Last Node
     int getLast()
     {
