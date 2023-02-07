@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-//Queue using static array
+//Queue using circular array
 const int MAX_SIZE = 500;
 
 class Queue
