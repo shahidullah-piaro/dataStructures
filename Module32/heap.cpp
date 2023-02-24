@@ -106,8 +106,7 @@ int main()
     heap.insert(20);
     heap.insert(30);
     cout<<"Max element = "<<heap.getMax()<<"\n";
-//    heap.PrintHeap();
-
+    //heap.PrintHeap();
     cout<<"Max element = "<<heap.ExtractMax()<<"\n";
     cout<<"Max element = "<<heap.ExtractMax()<<"\n";
     return 0;
